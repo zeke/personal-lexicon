@@ -1,0 +1,23 @@
+<head>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="app">
+    
+    <h1>Personal Lexicon</h1>
+    
+    <ul class="vanilla-list">
+      <li v-for="entry in entries">
+        <div>
+          <h2>{{entry.term}}</h1>
+          <p v-if="entry.notes">{{entry.notes}}</p>
+
+          URL: <a :href="entry.url" v-if="entry.url">{{entry.url}}</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  <script src="https://unpkg.com/vue"></script>
+  <script src="index.js"></script>
+</body>
